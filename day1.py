@@ -42,20 +42,11 @@ def word_to_digits(word: str) -> str:
 def part2(data):
     results = []
     for word in data.split():
-        # print(word_to_digits(word))
         digits = word_to_digits(word)
         results.append(int(digits[0] + digits[-1]))
-        # else:
-            # results.append(int(digits))
-    # print(results)
-    # for result in results:
-    #     if result > 99 or result < 0:
-    #         print(f"warning {result}")
     return sum(results)
 
 
 
 
 print(part2(data))
-# print(replace_word_numbers("llnshf1"))
-# print(word_to_digits("eighthree"))
