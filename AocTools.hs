@@ -1,4 +1,4 @@
-module AocTools where
+module AocTools (loadData) where
 
 loadData :: String -> IO [String]
 loadData f  = do

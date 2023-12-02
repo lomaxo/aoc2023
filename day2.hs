@@ -1,12 +1,7 @@
 import Data.List.Split
+import AocTools (loadData)
 type ColourSet = (Int, Int, Int)
 type Game = (Int, [ColourSet])
-
-loadData :: String -> IO [String]
-loadData f  = do
-  contents <- readFile f
-  let fileLines = lines contents
-  return fileLines
 
 testLine = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
 
