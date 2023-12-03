@@ -49,8 +49,8 @@ containsSymbol = any (any isSymbol)
 getCentre :: [String] -> Int
 getCentre xs = read (init (drop 1 (xs !! 1)))
 
-day1 :: IO Int
-day1 = do
+part1 :: IO Int
+part1 = do
     contents <- readFile "input_files/aoc23-3.txt"
     let numbers = map getCentre 
                 $ filter containsSymbol 
@@ -60,3 +60,4 @@ day1 = do
     let total = sum numbers
     return total
 
+part2 = convert2DList (lines testData)
