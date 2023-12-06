@@ -1,8 +1,8 @@
+module Main where
+-- chargeTime :: Float -> Float -> Float
+-- chargeTime totalTime distance = (totalTime + sqrt (totalTime^2 - (4 * distance))) / 2
 
-chargeTime :: Float -> Float -> Float
-chargeTime totalTime distance = (totalTime + sqrt (totalTime^2 - (4 * distance))) / 2
-
-validTimes :: Float -> Float -> [Int]
+-- validTimes :: Float -> Float -> [Int]
 validTimes totalTime distance = filter (\c -> (fromIntegral c * (totalTime - fromIntegral c))>distance ) [1..round totalTime]
 
 -- distance c t = c * (t - c)
@@ -10,6 +10,9 @@ validTimes totalTime distance = filter (\c -> (fromIntegral c * (totalTime - fro
 -- isValid d t c = (c * (t - c))>=d
 
 -- countallvalid :: [(Float, Float)] -> Int
-countallvalid :: [(Float, Float)] -> Int
+-- countallvalid :: [(Float, Float)] -> Int
 countallvalid input = product $ map (length . uncurry validTimes) input
-
+main:: IO ()
+main = do
+    print (countallvalid [(61677571, 430103613071150)])
+    return ()
