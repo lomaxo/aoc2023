@@ -1,2 +1,4 @@
 input_files
 input_files_temp
+.o
+.hi
